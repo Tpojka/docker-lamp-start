@@ -12,13 +12,13 @@ Also, it's PHP image comes with xdebug configuration prepared (check Dockerfile)
 
 1. from root of your project clone submodule in already initialized git project
 
-    `git sumbodule add git@github.com:Tpojka/docker-lamp-start.git submodule/`
+    `git sumbodule add git@github.com:Tpojka/docker-lamp-start.git submodule/docker-lamp-start/`
 
     // if you want to place it in another place in project, you should fix relative path in docker-compose.yml file in services:web:volumes section
 
 2. build containers
 
-    `docker-compose -f submodule/docker-lamp-start/docker-compose.yml -d`
+    `docker-compose -f submodule/docker-lamp-start/docker-compose.yml up -d`
 
 
     // executed from root location, docker-compose should be righteous pointed to docker-compose.yml file using -f flag
