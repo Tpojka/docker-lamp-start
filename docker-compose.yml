@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  web:
+    container_name: web-container
+    build:
+      context: .
+      dockerfile: container-build/web/Dockerfile
+    env_file:
+      - ./.db.env
+    ports:
+      - "8101:80"
+    volumes:
+      - ../../:/var/www
+    depends_on:
+      - db
+
+  db:
+    container_name: db-container
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    env_file:
+      - ./.db.env
