@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: container-build/web/Dockerfile
     env_file:
-      - ./.db.env
+      - ./.env
     ports:
       - "8101:80"
     volumes:
@@ -16,8 +16,8 @@ services:
 
   db:
     container_name: db-container
-    image: mysql:latest
+    image: mysql:5.7
     ports:
       - "3307:3306"
     env_file:
-      - ./.db.env
+      - ./.env

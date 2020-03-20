@@ -21,7 +21,7 @@
 # OR use plain old docker
 #
 #   docker build -f Dockerfile-dev -t {{volume_name}} .
-#   docker run -it -p "8000:80" -v $PWD:/var/www {{volume_name}}
+#   docker run -it -p "8101:80" -v $PWD:/var/www {{volume_name}}
 #
 FROM php:7.4-apache
 
