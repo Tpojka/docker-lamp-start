@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   web:
-    container_name: web-container
+    container_name: tasks-web
     build:
       context: .
       dockerfile: container-build/web/Dockerfile
@@ -15,7 +15,7 @@ services:
       - db
 
   db:
-    container_name: db-container
+    container_name: tasks-db
     image: mysql:5.7
     ports:
       - "3307:3306"

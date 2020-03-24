@@ -33,7 +33,7 @@ RUN apt update \
  && mv /var/www/html /var/www/public \
  && curl -sS https://getcomposer.org/installer \
   | php -- --install-dir=/usr/local/bin --filename=composer \
- && echo "AllowEncodedSlashes On" >> /etc/apache2/apache2.conf
+ && echo "AllowEncodedSlashes On" >> /etc/apache2/apache2.conf \
+ && apt -y install npm
 
 WORKDIR /var/www
-
